@@ -1,0 +1,239 @@
+/* Reset e configurações base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #4a1a1a 0%, #3d170e 25%, #643c3c 75%, #ebdcc4 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px 30px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Seção do perfil */
+.profile-section {
+    margin-bottom: 30px;
+}
+
+.profile-image {
+    margin-bottom: 20px;
+}
+
+.profile-image img {
+    width: 300px;
+    height: 350px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.logo-placeholder {
+    width: 280px;
+    height: 168px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    margin: 0 auto;
+    border: none;
+    box-shadow: none;
+}
+
+.logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #4a1a1a;
+    text-align: center;
+    line-height: 1.2;
+    padding: 10px;
+}
+
+.profile-image img:hover {
+    transform: scale(1.05);
+}
+
+.name {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #4a1a1a;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: #8B0000;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Seção de contato */
+.contact-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: rgba(245, 245, 220, 0.3);
+    border-radius: 15px;
+    border: 1px solid rgba(139, 0, 0, 0.1);
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: #4a1a1a;
+}
+
+.contact-item:last-child {
+    margin-bottom: 0;
+}
+
+.contact-item i {
+    margin-right: 12px;
+    color: #8B0000;
+    width: 20px;
+    text-align: center;
+}
+
+/* Botões de navegação */
+.navigation-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn i {
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+.btn-whatsapp {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: white;
+}
+
+.btn-whatsapp:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+}
+
+.btn-portfolio {
+    background: linear-gradient(135deg, #3d170e, #643c3c);
+    color: white;
+}
+
+.btn-portfolio:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(139, 0, 0, 0.3);
+}
+
+.btn-instagram {
+    background: linear-gradient(135deg, #E4405F, #833AB4);
+    color: white;
+}
+
+.btn-instagram:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(228, 64, 95, 0.3);
+}
+
+/* Rodapé */
+.footer {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(139, 0, 0, 0.1);
+}
+
+.footer p {
+    font-size: 0.85rem;
+    color: #A0522D;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .container {
+        padding: 30px 20px;
+        margin: 10px;
+    }
+    
+    .name {
+        font-size: 1.8rem;
+    }
+    
+    .profile-image img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .btn {
+        padding: 12px 18px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Animação de entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Efeitos de hover suaves */
+.profile-section, .contact-section, .navigation-buttons, .footer {
+    transition: opacity 0.3s ease;
+}
+
+.profile-section:hover, .contact-section:hover {
+    opacity: 0.95;
+}
