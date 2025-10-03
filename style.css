@@ -43,8 +43,8 @@ html, body {
 }
 
 .profile-image img {
-    width: 380px;
-    height: 225px;
+    width: 400px;
+    height: 280px;
     object-fit: contain;
     object-position: center;
     transition: transform 0.3s ease;
