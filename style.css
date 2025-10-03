@@ -16,24 +16,18 @@ html, body {
     padding: 0;
     margin: 0;
     line-height: 1.6;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    overflow: auto;
 }
 
 .container {
     background: #ffffff;
-    backdrop-filter: blur(10px);
     border-radius: 20px;
     padding: 30px 25px;
     max-width: 380px;
     width: 100%;
     text-align: center;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: none;
 }
 
 /* Seção do perfil */
@@ -46,20 +40,20 @@ html, body {
 }
 
 .profile-image img {
-    width: 320px;
-    height: 190px;
+    width: 380px;
+    height: 225px;
     object-fit: contain;
     transition: transform 0.3s ease;
     background: #ffffff;
     border: none;
     box-shadow: none;
     border-radius: 15px;
-    padding: 20px;
+    padding: 25px;
 }
 
 .logo-placeholder {
-    width: 320px;
-    height: 190px;
+    width: 380px;
+    height: 225px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -208,20 +202,14 @@ html, body {
         padding: 0;
         margin: 0;
         height: 100vh;
-        overflow: hidden;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        overflow: auto;
     }
     
     .container {
         padding: 20px 15px;
-        margin: 0;
+        margin: 10px;
         max-width: calc(100vw - 20px);
-        max-height: calc(100vh - 20px);
-        overflow-y: auto;
+        min-height: auto;
     }
     
     .name {
@@ -229,9 +217,9 @@ html, body {
     }
     
     .profile-image img {
-        width: 280px;
-        height: 165px;
-        padding: 15px;
+        width: 300px;
+        height: 175px;
+        padding: 20px;
     }
     
     .btn {
@@ -246,12 +234,7 @@ html, body {
         margin: 0;
         padding: 0;
         height: 100vh;
-        overflow: hidden;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        overflow: auto;
     }
 }
 
