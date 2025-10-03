@@ -5,21 +5,27 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
     font-family: 'Inter', sans-serif;
     background: linear-gradient(135deg, #4a1a1a 0%, #3d170e 25%, #643c3c 75%, #ebdcc4 100%);
     min-height: 100vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding: 0;
     margin: 0;
     line-height: 1.6;
-    overflow-x: hidden;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .container {
-    background: #F5F5DC;
+    background: #ffffff;
     backdrop-filter: blur(10px);
     border-radius: 20px;
     padding: 30px 25px;
@@ -40,11 +46,11 @@ body {
 }
 
 .profile-image img {
-    width: 250px;
-    height: 150px;
+    width: 320px;
+    height: 190px;
     object-fit: contain;
     transition: transform 0.3s ease;
-    background: #F5F5DC;
+    background: #ffffff;
     border: none;
     box-shadow: none;
     border-radius: 15px;
@@ -52,15 +58,16 @@ body {
 }
 
 .logo-placeholder {
-    width: 280px;
-    height: 168px;
+    width: 320px;
+    height: 190px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: transparent;
+    background: #ffffff;
     margin: 0 auto;
     border: none;
     box-shadow: none;
+    border-radius: 15px;
 }
 
 .logo-text {
@@ -197,19 +204,23 @@ body {
 
 /* Responsividade */
 @media (max-width: 480px) {
-    body {
-        padding: 5px;
+    html, body {
+        padding: 0;
         margin: 0;
-        min-height: 100vh;
         height: 100vh;
         overflow: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
     }
     
     .container {
-        padding: 25px 20px;
-        margin: 5px;
-        max-width: calc(100vw - 10px);
-        max-height: calc(100vh - 10px);
+        padding: 20px 15px;
+        margin: 0;
+        max-width: calc(100vw - 20px);
+        max-height: calc(100vh - 20px);
         overflow-y: auto;
     }
     
@@ -218,8 +229,8 @@ body {
     }
     
     .profile-image img {
-        width: 220px;
-        height: 130px;
+        width: 280px;
+        height: 165px;
         padding: 15px;
     }
     
@@ -234,12 +245,13 @@ body {
     html, body {
         margin: 0;
         padding: 0;
-        height: 100%;
-        overflow-x: hidden;
-    }
-    
-    body {
-        background-attachment: fixed;
+        height: 100vh;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
     }
 }
 
